@@ -1,0 +1,74 @@
+body{
+  font-size:100%;
+  padding:0;
+  margin:0;
+  font-family: 'Roboto', sans-serif;
+}
+/*=================RESET STYLES ================*/
+ul{
+  padding:0;
+  margin:0;
+}
+ul li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  color:inherit;
+}
+.clearfix:after{
+  clear: both;
+  content: "";
+  display: table;
+}
+/*=================END RESET STYLES==============*/
+
+.main-container{
+  width:80%;
+  margin:0 auto;
+}
+.header-container{
+  width:80%;
+  margin:0 auto;
+}
+.content-container{
+  width:80%;
+  margin:0 auto;
+}
+.footer-container{
+  width:80%;
+  margin:0 auto;
+}
+
+
+
+/*======= NAVIGATION ======*/
+nav{
+  padding:15px 0;
+  box-sizing: border-box;
+}
+#logo{
+  float:left;
+  padding:5px 0;
+}
+#menuLeft{
+  float:right
+}
+#menuLeft ul li{
+  display: inline-block;
+  padding:5px;
+  margin-left: 5px;
+}
+#menuLeft ul li a{
+  text-transform: uppercase;
+}
+/*======= END NAVIGATION ===*/
+/*=======HEADER ============*/
+#headerBG{
+  background:url('../img/header-background.jpg') no-repeat center center;
+  background-size:cover;
+}
+
+/*=========END HEADER =======*/

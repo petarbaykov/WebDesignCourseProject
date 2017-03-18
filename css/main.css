@@ -24,7 +24,13 @@ a:hover{
   display: table;
 }
 /*=================END RESET STYLES==============*/
-
+.padding80{
+  padding-top:80px;
+  padding-bottom:80px;
+}
+.relative{
+  position: relative;
+}
 .main-container{
   width:80%;
   margin:0 auto;
@@ -51,24 +57,80 @@ nav{
 }
 #logo{
   float:left;
+
+}
+#logo span{
   padding:5px 0;
 }
 #menuLeft{
-  float:right
+  float:right;
+  position: relative;
 }
 #menuLeft ul li{
   display: inline-block;
-  padding:5px;
   margin-left: 5px;
 }
 #menuLeft ul li a{
+  padding:5px;
   text-transform: uppercase;
+}
+#getStarted{
+  color:#fff;
+}
+.mobMenu{
+  display: none;
+  position: absolute;
+  right: 10px;
+  top:7px;
+  font-size:2em;
+  cursor: pointer;
 }
 /*======= END NAVIGATION ===*/
 /*=======HEADER ============*/
+header{
+  text-align: center;
+  color:#fff;
+}
+header h1{
+  font-size:2.5em;
+  text-transform: uppercase;
+}
 #headerBG{
   background:url('../img/header-background.jpg') no-repeat center center;
   background-size:cover;
+  background-attachment: fixed;
 }
-
+.headerZindex{
+  z-index:5;
+}
+.overlay{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:0;
+}
+.overlayGreen{
+  background-color:rgba(13,93,92,0.4);
+}
 /*=========END HEADER =======*/
+
+
+
+/*================MEDIA QUERIES ==============*/
+@media only screen and (max-width: 780px) {
+  	.mobMenu{
+      display: inline-block;
+    }
+    #menuLeft{
+      display: none;
+      float:none;
+      clear:both;
+      text-align: center;
+    }
+    #menuLeft ul li{
+      display: block;
+      padding:5px;
+    }
+}

@@ -52,12 +52,13 @@ a:hover{
   width:20%;
   display: inline-block;
   box-sizing: border-box;
-
+  vertical-align: top;
 }
 .rightaside{
   width:20%;
   display: inline-block;
   box-sizing: border-box;
+  vertical-align: top;
 }
 .container{
   width:80%;
@@ -70,6 +71,20 @@ a:hover{
   padding-left: 5px;
   padding-right: 5px;
   display: inline-block;
+}
+.btn{
+  display: inline-block;
+  padding:15px;
+  font-size:1.2em;
+}
+.btn-green{
+  border:2px solid rgb(111,176,72);
+  border-radius: 50px;
+  font-weight: bold;
+}
+.btn-green:hover{
+  background:rgb(111,176,72);
+  cursor: pointer;
 }
 /*======= NAVIGATION ======*/
 nav{
@@ -86,6 +101,7 @@ nav{
 #menuLeft{
   float:right;
   position: relative;
+  font-size:0.9em;
 }
 #menuLeft ul li{
   display: inline-block;
@@ -137,8 +153,70 @@ header h1{
   background-color:rgba(13,93,92,0.4);
 }
 /*=========END HEADER =======*/
+/*=========SIDEBARS===========*/
+.social-box{
+  display: inline-block;
+  box-sizing: border-box;
+  width:32%;
+  text-align: center;
+  color:#fff;
+  padding:10px 5px;
+}
+.social-box span{
+  border-radius: 50%;
+  padding:15px;
 
+}
+.facebook-counter span{
+  background:#2c5182;
+  padding:15px 20px;
+}
+.twitter-counter span{
+  background:#3bafda;
 
+}
+.rss-counter span{
+  background:#e27a2f;
+}
+.facebook-counter{
+  background:#325c94;
+}
+.twitter-counter{
+  background:#4fc0e9;
+}
+.rss-counter{
+  background:#f78634;
+}
+/*========END SIDEBARS =======*/
+/*========FOOTER =======*/
+footer{
+  color:rgb(13,93,92);
+}
+footer ul li a{
+  color:rgb(13,93,92);
+}
+footer input{
+  background:rgb(239,241,236);
+  outline:none;
+  border-radius: 4px;
+  border:none;
+  padding:6px;
+  width: 100%;
+}
+input::-webkit-input-placeholder{
+  color:rgb(13,93,92);
+}
+input:-moz-placeholder{
+  color:rgb(13,93,92);
+}
+footer button{
+  border:none;
+  position: absolute;
+  right:0;
+  top:5px;
+  background: transparent;
+}
+/*=======END FOOTER =========*/
 
 /*================MEDIA QUERIES ==============*/
 @media only screen and (max-width: 780px) {

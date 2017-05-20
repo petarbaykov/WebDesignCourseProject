@@ -12,6 +12,9 @@
     <title></title>
     <!--Comment-->
     <!--Another comment-->
+    <script>
+      var page = "home";
+    </script>
   </head>
   <body>
     <header id="headerBG" class="relative padding120">
@@ -24,8 +27,8 @@
               <div class="mobMenu collapse"><span class="fa fa-bars"></span></div>
               <div id="menuLeft" class="">
                   <ul>
-                    <li><a href="#">Начало</a></li>
-                    <li><a href="#">Блог</a></li>
+                    <li><a href="index.html">Начало</a></li>
+                    <li><a href="blog.html">Блог</a></li>
                     <li><a href="contacts.html">Контакти</a></li>
                     <li><a href="#" id="getStarted" class="prColBG">Започни</a></li>
                   </ul>
@@ -33,7 +36,7 @@
           </div>
       </nav>
 
-        <div class="header-container relative headerZindex header" >
+        <div class="header-container relative headerZindex header" id="home-header">
             <span class="date">18 юли, 2017</span>
             <h1>Не пропускай предстоящото събитие</h1>
             <div class="count-down">
@@ -95,55 +98,86 @@
         </div>
         <div class="overlay overlayGreen"></div>
       </header>
-      <section class="padding80">
+      <section class="padding80 subCol">
         <div class="container">
           <aside class="leftaside">
-            <ul>
-              <li class="color-green"><a href="#">Начало</a></li>
-              <li class="color-orange"><a href="#">За нас</a></li>
-              <li class="color-red"><a href="#">Контакти</a></li>
+            <ul id="left-nav">
+              <li class="color-green"><span onclick="scrollToSection(this)" id="speakers">ГОВОРИТЕЛИ</span></li>
+              <li class="color-orange"><span onclick="scrollToSection(this)" id="schedule">ПРОГРАМА</span></li>
+              <li class="color-red"><span onclick="scrollToSection(this)">ЗА КОНЕФЕРЕНЦИЯТА</span></li>
               <li class="color-gray"><a href="#">Вход</a></li>
             </ul>
           </aside>
           <div class="content-container">
-            <div class="blog_article_container">
-                <article class="single_article">
-                    <div class="article_header">
-                        <img class="post_img" src="img/post-bg.jpg"/>
-                        <div class="article_tag">TECH</div>
-                        <div class="article_date"><span class="date_number">27</span>MAR</div>
-                    </div>
-                    <div class="article_content">
-                        <h2 class="article_title">City Ligths in New York</h2>
-                        <h3 class="article_subtitle">The city that never sleeps </h3>
-                        <p class="article_description">Description</p>
-                    </div>
-                    <div class="article-footer">
+              <div class="speakers padding40" >
+                  <h1>Говорители</h1>
+                  <div class="speker-box ">
+                        <div class="speaker-image" id="speaker-1">
 
-                    </div>
-                </article>
-                <article class="single_article">
-                    <div class="article_header">
-                        <img class="post_img" src="img/post-bg.jpg"/>
-                        <div class="article_tag">TECH</div>
-                        <div class="article_date"><span class="date_number">27</span>MAR</div>
-                    </div>
-                    <div class="article_content">
-                        <h2 class="article_title">City Ligths in New York</h2>
-                        <h3 class="article_subtitle">The city that never sleeps </h3>
-                        <p class="article_description">Description</p>
-                    </div>
-                    <div class="article-footer">
+                        </div>
+                        <div class="translate">
+                          <div class="speaker-name">Иван Василев</div>
+                          <div class="speaker-job">C# developer</div>
+                          <div class="person-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolo laborum.</div>
+                        </div>
+                        <div class="speaker-social">
+                            <span class="fa fa-facebook"></span>
+                              <span class="fa fa-twitter"></span>
+                                <span class="fa fa-linkedin"></span>
+                                  <span class="fa fa-instagram"></span>
+                        </div>
+                  </div>
+                  <div class="speker-box ">
+                        <div class="speaker-image" id="speaker-1">
 
-                    </div>
-                </article>
-            </div>
+                        </div>
+                        <div class="translate">
+                          <div class="speaker-name">Петър Петров</div>
+                          <div class="speaker-job">Node.js expert</div>
+                          <div class="person-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolo laborum.</div>
+                        </div>
+                        <div class="speaker-social">
+                            <span class="fa fa-facebook"></span>
+                              <span class="fa fa-twitter"></span>
+                                <span class="fa fa-linkedin"></span>
+                                  <span class="fa fa-instagram"></span>
+                        </div>
+                  </div>
+              </div>
+              <div class="clearfix"></div>
+              <div class="schedule padding40">
+                <h1>Програма</h1>
+                <div class="schedule_row">
+                    <span class="time">8.00 - 9.00</span>
+                    <div class="activity">Регистрация</div>
+                    <span class="starter">
+
+                    </span>
+                </div>
+                <div class="schedule_row">
+                    <span class="time">9.00 - 10.00</span>
+                    <div class="activity">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                    <span class="starter">
+
+                    </span>
+                </div>
+                <div class="schedule_row">
+                    <span class="time">10.00 - 11.00</span>
+                    <div class="activity">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                    <span class="starter">
+
+                    </span>
+                </div>
+              </div>
           </div>
           <aside class="rightaside">
             <div class="social-counters">
               <div class="facebook-counter social-box"><span class="fa fa-facebook"></span></div>
               <div class="twitter-counter social-box"><span class="fa fa-twitter"></span></div>
               <div class="rss-counter social-box"><span class="fa fa-rss"></span></div>
+            </div>
+            <div class="latest-post">
+              <h2>Последно от блога</h2>
             </div>
           </aside>
         </div>

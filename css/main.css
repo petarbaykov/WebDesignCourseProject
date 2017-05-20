@@ -28,6 +28,10 @@ a:hover{
   padding-top:80px;
   padding-bottom:80px;
 }
+.padding120{
+
+  padding-bottom: 120px;
+}
 .relative{
   position: relative;
 }
@@ -38,6 +42,7 @@ a:hover{
 .header-container{
   width:80%;
   margin:0 auto;
+
 }
 .content-container{
   width:59%;
@@ -74,8 +79,11 @@ a:hover{
 }
 .btn{
   display: inline-block;
-  padding:15px;
+  padding:10px 25px;
   font-size:1.2em;
+}
+.header{
+  padding-top:80px;
 }
 .btn-green{
   border:2px solid rgb(111,176,72);
@@ -86,10 +94,55 @@ a:hover{
   background:rgb(111,176,72);
   cursor: pointer;
 }
+.btn-orange{
+  background:#FFA500;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn-orange:hover{
+  background:#fff;
+  color:rgb(111,176,72);
+
+}
+.conf-boxes{
+  position:absolute;
+  top:110%;
+  width:100%;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.4);
+}
+.conf-desc{
+  background:#fff;
+  float:left;
+  width:25%;
+  color:#000;
+  padding:15px;
+  box-sizing: border-box;
+  text-align: left;
+}
+.conf-title{
+  font-weight:bold;
+  position:relative;
+}
+.title-text{
+  position:absolute;
+  top:50%;
+  left:50%;
+  -ms-transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%);
+}
+.conf-title .fa{
+  font-size:2.5rem;
+  color:rgb(111,176,72);
+}
 /*======= NAVIGATION ======*/
 nav{
-  padding:15px 0;
+  padding:20px 0;
   box-sizing: border-box;
+
+  position:relative;
+  z-index:5;
 }
 #logo{
   float:left;
@@ -110,10 +163,13 @@ nav{
 #menuLeft ul li a{
   padding:5px;
   text-transform: uppercase;
+  color:#fff;
+  font-weight: bold;
 }
-#getStarted{
+#menuLeft ul li #getStarted{
   color:#fff;
   border-radius: 20px;
+  padding:5px 10px;
 }
 .mobMenu{
   display: none;
@@ -134,9 +190,29 @@ header h1{
   text-transform: uppercase;
 }
 #headerBG{
-  background:url('../img/header-background.jpg') no-repeat center center;
+  /*background:url('../img/header-background.jpg') no-repeat center center;
   background-size:cover;
-  background-attachment: fixed;
+  background-attachment: fixed;*/
+
+}
+.fullscreen-video {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  height:100%;
+  width:100%;
+  overflow:hidden;
+}
+.fullscreen-bg__video{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:300%;
 }
 .headerZindex{
   z-index:5;
@@ -150,7 +226,37 @@ header h1{
   z-index:0;
 }
 .overlayGreen{
-  background-color:rgba(13,93,92,0.4);
+  background: #4568DC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+opacity:0.5;
+}
+.date{
+  border:2px solid #fff;
+  padding:10px 15px;
+  font-weight: bold;
+}
+.count-down{
+  margin:40px 0;
+  overflow:hidden;
+}
+.counter-box{
+  float:left;
+  width:25%;
+  text-align: center;
+
+}
+.counter-box span{
+  width:50px;
+  height:50px;
+  border:3px solid #fff;
+  border-radius: 50%;
+  padding:25px;
+  font-size:3rem;
+  display: inline-block;
+}
+.action_btns{
+  margin-top:40px;
 }
 /*=========END HEADER =======*/
 /*=========SIDEBARS===========*/
@@ -323,4 +429,17 @@ footer button{
       display: block;
       padding:5px;
     }
+}
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
 }
